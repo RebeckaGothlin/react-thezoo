@@ -1,13 +1,18 @@
 import { RouterProvider } from "react-router-dom";
-import "./App.scss";
+import './App.scss';
+import { AnimalProvider } from "./components/AnimalContext";
 import { router } from "./Router";
 
-function App() {
+const App = () => {
+
   return (
     <>
-      <RouterProvider router={router}></RouterProvider>
+      <AnimalProvider>
+        <RouterProvider router={router}></RouterProvider>
+      </AnimalProvider>
+
     </>
   );
 }
-
+ 
 export default App;
