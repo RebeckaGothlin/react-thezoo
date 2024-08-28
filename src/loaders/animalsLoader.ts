@@ -1,23 +1,26 @@
-import { LoaderFunction } from "react-router-dom";
 import { IAnimal } from "../models/IAnimal";
 import { getAnimal } from "../services/AnimalService";
 
-export const animalsLoader: LoaderFunction = async () => {
-  try {
-    const storedAnimals = sessionStorage.getItem("animals");
-    if (storedAnimals) {
-      return JSON.parse(storedAnimals) as IAnimal[];
-    }
 
-    const animals = await getAnimal();
-    if (animals) {
-      sessionStorage.setItem("animals", JSON.stringify(animals));
-      return animals;
-    }
+export interface IAnimalsLoader {
+  animalList: IAnimal[];
+  error: string;
+}
+
+export const animalsLoader = async (): Promise<IAnimalsLoader> => {
+  const data: IAnimalsLoader = { animalList: [], error: '' };
+const response = await getAnimal();
+  try {
     
-    throw new Error("Failed to fetch animals");
+    if (response) {
+      data.animalList = response;
+    } else {
+      data.error = 'No response from the API';
+    }
   } catch (error) {
-    console.error("Loader Error: ", error);
-    throw error;
+    console.error('An error occurred:', error);
+    data.error = 'Something went wrong. Please try again later.';
   }
+
+  return data;
 };

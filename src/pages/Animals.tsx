@@ -1,19 +1,47 @@
-import '../style/animal.scss';
-import { useLoaderData } from "react-router-dom";
+import "../style/animal.scss";
+import { useEffect, useState } from "react";
 import { IAnimal } from "../models/IAnimal";
-import { Spinner } from '../components/Spinner';
-import { AnimalsPresentation } from '../components/AnimalPresentation';
+import { AnimalPresentation } from "../components/AnimalPresentation";
+import { Spinner } from "../components/Spinner";
+import { getAnimal } from "../services/AnimalService";
 
 export const Animals = () => {
-  const animals = useLoaderData() as IAnimal[]; // Hämta laddade data
-  const isLoading = animals.length === 0; // Kontrollera om data är laddad
+  const [animals, setAnimals] = useState<IAnimal[]>(() => {
+    const storedAnimals = sessionStorage.getItem("animals");
+    return storedAnimals ? JSON.parse(storedAnimals) : [];
+  });
+  const [isLoading, setIsLoading] = useState(true);
 
-  if (isLoading) return <Spinner />;
+  useEffect(() => {
+    const fetchAnimals = async () => {
+      try {
+        if (animals.length === 0) {
+          const response = await getAnimal();
+          if (response) {
+            sessionStorage.setItem("animals", JSON.stringify(response));
+            setAnimals(response);
+          }
+        }
+      } catch (error) {
+        console.error("Error fetching animals:", error);
+      } finally {
+        setIsLoading(false);
+      }
+    };
+
+    fetchAnimals();
+  }, [animals.length]);
 
   return (
     <>
-      <h1>Våra Djur</h1>
-      <AnimalsPresentation animals={animals} />
+      {isLoading ? (
+        <Spinner />
+      ) : (
+        <>
+          <h1>Våra djur</h1>
+          <AnimalPresentation animals={animals}></AnimalPresentation>
+        </>
+      )}
     </>
   );
 };
