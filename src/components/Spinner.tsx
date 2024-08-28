@@ -1,5 +1,14 @@
+import '../style/spinner.scss'
+
 export const Spinner = () => {
-    return <>
-        <h3>Loading...</h3>
-    </>
+
+  return <>
+    <div className='spinner'>
+      <div></div>
+      <div></div>
+      <div></div>
+      <div></div>
+    </div>
+  </>
+
 }
