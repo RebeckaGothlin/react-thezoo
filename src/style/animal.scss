@@ -1,0 +1,170 @@
+
+
+.animal-card-container {
+  border: 1px solid #EEE7CD;
+  margin-bottom: 2rem;
+  width: 370px;
+  height: 100%;
+
+  &.isFed {
+    outline: 4px solid  rgb(152, 215, 152);
+  }
+
+  &.gettingHungry {
+    outline: 6px solid  rgb(228, 228, 162);
+
+    .span {
+      font-style: italic;
+    }
+  }
+
+  &.isHungry {
+    outline: 8px solid  rgb(215, 153, 153);
+
+    .span {
+      font-weight: bold;
+    }
+  }
+
+  &:hover, &:active {
+    cursor: pointer;
+    outline: 6px solid  #EBDDAD;
+  }
+    
+  &:focus,
+  &:focus-visible {
+  outline: 4px solid rgb(50, 50, 53);;
+}
+}
+
+.animal-name {
+  font-size: 5rem;
+  text-transform: uppercase;
+  margin-top: 0;
+}
+
+.animal-isFed-status {
+  text-decoration: underline;
+
+  span {
+    outline: none;
+    padding: 0.4em 4em;
+  }
+}
+
+.animal-image-container {
+  width: 370px;
+  height: 400px;
+  overflow: hidden;
+  margin-top: 1rem;
+
+  img {
+    object-fit: cover;
+    width: 100%;
+    height: 100%
+  }
+}
+
+.animal-short-desc {
+  text-align: left;
+  margin: 1rem;
+}
+
+.animal-presentation {
+  border: 1px solid #EEE7CD;
+  margin-bottom: 2rem;
+  width: 370px;
+  height: 100%;
+}
+
+.animal-presentation-header, .animal-presentation-footer {
+  display: flex;
+}
+
+.button-back {
+  background-color: transparent;
+  color: #3d3939;
+  font-weight: bold;
+  padding: 0.4em 0.4em;
+  // position: absolute;
+  // margin-left: 0;
+}
+
+.button-feed {
+  background-color: #EDEDED;
+  color: #3d3939;
+  font-weight: bold;
+
+  &:disabled {
+    color: #AEAEAE;
+  }
+}
+
+.animal-about {
+  font-family: "open sans";
+  font-size: 1.5rem;
+}
+
+.text-bold {
+  font-weight: bold;
+}
+
+.about-text-left {
+  text-align: left;
+  max-width: 800px;
+}
+
+.about-thank {
+  font-family: "Open Sans";
+  font-size: 1.2rem;
+}
+
+
+@media screen and (min-width: 768px) {
+
+  .animal-name {
+    font-size: 4.5rem;
+  }
+  
+  .animal-cards-wrapper {
+    display: flex;
+    flex-wrap: wrap;
+    column-gap: 4rem;
+    justify-content: center;
+  }
+
+  .animal-card-container {
+    border: 1px solid #EEE7CD;
+    margin-bottom: 4rem;
+    width: 300px;
+    height: 730px;
+  }
+
+  .animal-image-container {
+    width: 100%;
+    height: 400px;
+    margin-top: 1rem;
+  
+  }
+}
+
+@media screen and (min-width: 1024px) {
+
+  .animal-cards-wrapper {
+
+    flex-wrap: wrap;
+    column-gap: 4rem;
+    justify-content: none;
+  }
+
+  .animal-card-container {
+    height: 700px;
+  }
+
+  .animal-image-container {
+    width: 100%;
+    height: 300px;
+    margin-top: 1rem;
+  }
+
+}
