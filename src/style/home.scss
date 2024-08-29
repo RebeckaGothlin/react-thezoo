@@ -1,5 +1,5 @@
-.hero-img {
-  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('/zoo2.webp');
+.home-img {
+  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('../../public/home-logo.png');
   height: 600px;
   width: 375px;
   background-position: center;
@@ -8,61 +8,55 @@
   position: relative;
 }
 
-.hero-info {
+.home-info {
   display: flex;
   flex-direction: column;
-  justify-content: center;
-  align-content: space-around;
-  place-self: center;
-  color: white;
+  justify-content: space-between; 
+  align-items: center;
+  position: absolute;
+  top: 20%;
+  left: 0;
+  right: 0;
+  padding: 1rem;
+}
 
-  img {
-    width: 300px;
-  }
+.home-info img {
+  width: 300px;
+  max-width: 100%;
+}
 
-  p {
-    margin-block: 2rem;
-    text-shadow: #000 1px 0 10px;
-  }
+.home-info p {
+  margin-block: 2rem;
+  text-shadow: #000 1px 0 10px;
+}
 
-  button {
-    margin-top: 2rem;
-    background-color: #EEE7CD;
-    font-weight: bold;
-    font-size: 1rem;
-    padding: 0.6rem 1.2rem;
-  }
+.home-info button {
+  background-color: #e2c5be;
+  font-weight: bold;
+  font-size: 1rem;
+  padding: 0.6rem 1.2rem;
+  margin-top: 90px;
+  color: #3d3939;
 }
 
 @media screen and (min-width: 768px) {
-  .hero-img {
-  height: 850px;
-  width: 700px;
+  .home-img {
+    height: 850px;
+    width: 700px;
   }
 
-  .hero-info {
-  
-    img {
-      width: 500px;
-    }
-  
+  .home-info img {
+    width: 500px;
   }
 }
 
 @media screen and (min-width: 1200px) {
-  .hero-img {
-    height: 900px;
-    width: 1000px;
+  .home-img {
+    height: 1000px;
+    width: 700px;
   }
 
-  .hero-info {
-  
-    img {
-      width: 500px;
-    }
-  
+  .home-info img {
+    width: 500px;
   }
-
-
-  
 }

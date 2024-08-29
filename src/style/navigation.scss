@@ -1,5 +1,3 @@
-
-
 .navigation {
   display: flex;
   flex-direction: row;
@@ -17,10 +15,8 @@
     display: flex;
     justify-content: flex-end;
     align-items: center;
-    margin-right: 0rem;
-    margin-top: 2.8rem;
+    margin: 2.8rem 0 0 0;
     padding: 0;
-
 
     li {
       margin-left: 1rem;
@@ -29,16 +25,15 @@
 
     a {
       text-decoration: none;
-      color: #E2C5BE;
+      color: #e2c5be;
     }
 
     div {
-      background-color: #E2C5BE;
+      background-color: #e2c5be;
       color: #3d3939;
       font-size: 1rem;
       font-weight: bold;
       margin: 0;
-      margin-right: 0;
       padding: 0.4rem 0.8rem;
       border-radius: 8px;
     }
@@ -47,8 +42,7 @@
 
 @media screen and (min-width: 768px) {
   .navigation {
-    margin-bottom: 2rem;
     margin: 100px;
+    margin-bottom: 2rem;
   }
-
 }
