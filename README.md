@@ -3,7 +3,7 @@
 
 ---
 
-#### Link to the game
+#### Link to the ZOO webpage
 
 //Lägg in länk här
 
