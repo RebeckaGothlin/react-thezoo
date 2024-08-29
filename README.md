@@ -42,7 +42,7 @@
 
 ## Created by
 
-[![LinkdIn](https://img.shields.io/badge/-0077B5?style=for-the-badge&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/rebecka-g%C3%B6thlin-963037280/)
+[![LinkdIn](https://img.shields.io/badge/Rebecka%20Göthlin-0077B5?style=for-the-badge&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/rebecka-g%C3%B6thlin-963037280/)
 [![Github](https://img.shields.io/badge/Rebecka%20Göthlin-100000?style=for-the-badge&logo=github&logoColor=white)](https://github.com/RebeckaGothlin)
 
 #### Published: 2024
