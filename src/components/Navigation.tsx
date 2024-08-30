@@ -8,7 +8,7 @@ export const Navigation = () => {
       <nav className="navigation">
         <div className="logo-container">
           <NavLink to="/">
-            <img src={logo} alt="the zoo logo" width={100} />
+            <img className="logo-img" src={logo} alt="the zoo logo" width={100} />
           </NavLink>
         </div>
         <div className="menu">
