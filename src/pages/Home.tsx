@@ -14,12 +14,12 @@ export const Home = () => {
 
       const hungry = animals.filter(animal => {
         const hoursSinceFed = calculateHoursSinceFed(new Date(animal.lastFed));
-        return hoursSinceFed >= 4; // Om djuret inte har matats på mer än 4 timmar
+        return hoursSinceFed >= 4; 
       });
 
       setHungryAnimals(hungry);
     }
-  }, []); // Kör bara en gång när komponenten mountas
+  }, []); 
 
   return (
     <>
