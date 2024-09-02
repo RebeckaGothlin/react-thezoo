@@ -47,7 +47,7 @@ export const AnimalInfo = ({ animal, handleBack, clickToFeed, disabled }: IAnima
           onClick={() => clickToFeed(animal)}
           disabled={disabled}
         >
-          MATA
+          MATA DJUR
         </button>
       </div>
       <div 
