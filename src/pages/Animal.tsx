@@ -27,17 +27,16 @@ export const Animal = () => {
   const handleBack = () => {
     navigate('/animals');
   };
-
   const clickToFeed = (animal: IAnimal) => {
     const updatedAnimals = animals.map(a => 
       a.id === animal.id ? { ...a, isFed: true, lastFed: new Date().toLocaleString('sv-SE') } : a
     );
-
+  
     setAnimals(updatedAnimals);
-    sessionStorage.setItem('animals', JSON.stringify(updatedAnimals));
+    sessionStorage.setItem('animals', JSON.stringify(updatedAnimals)); // Uppdatera sessionStorage
     setDisabled(true);
   };
-
+  
   return (
     <>
       {findAnimal ? (

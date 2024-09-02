@@ -1,4 +1,5 @@
 import { IAnimal } from "../models/IAnimal";
+import { calculateHoursSinceFed } from '../functions/timeCalculation';
 
 interface IAnimalProps {
   animal: IAnimal;
@@ -9,6 +10,16 @@ interface IAnimalProps {
 
 export const AnimalInfo = ({ animal, handleBack, clickToFeed, disabled }: IAnimalProps) => {
   const fallbackImg = '/nopic-logo.png';
+  
+  const hoursSinceFed = calculateHoursSinceFed(new Date(animal.lastFed));
+  
+  const getFeedingStatusText = (hours: number) => {
+    if (hours < 3) return "Har fått mat.";
+    if (hours < 4) return "Börjar bli hungrig.";
+    return "Behöver bli matad!";
+  };
+
+  const feedingStatusText = getFeedingStatusText(hoursSinceFed);
 
   return (
     <div className='animal-presentation'>
@@ -37,11 +48,14 @@ export const AnimalInfo = ({ animal, handleBack, clickToFeed, disabled }: IAnima
       </div>
 
       <div className='animal-text-container animal-short-desc'>
-      <span className='animal-about'>OM</span>
-      <p><span className='text-bold'>Latinskt namn: </span>{animal?.latinName}</p>
+        <span className='animal-about'>OM</span>
+        <p><span className='text-bold'>Latinskt namn: </span>{animal?.latinName}</p>
         <p>{animal?.longDescription}</p>
         <p><span className='text-bold'>Mediciner:</span> {animal?.medicine}</p>
         <p><span className='text-bold'>Senast matad:</span> {animal?.lastFed}</p>
+        <p className={`animal-feeding-status ${hoursSinceFed < 3 ? 'isFed' : (hoursSinceFed < 4 ? 'gettingHungry' : 'isHungry')}`}>
+          {feedingStatusText}
+        </p>
         <button
           className='button-feed'
           onClick={() => clickToFeed(animal)}
