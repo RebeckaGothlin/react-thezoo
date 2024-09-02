@@ -4,12 +4,6 @@
 
 ---
 
-#### Link to the ZOO webpage
-
-//Lägg in länk här
-
----
-
 ## 📄 About The Project 
 
 **During the course "Javascript fördjupning" at Medieinstitutet we were tasked with developing The Zoo webpage using React and TypeScript.**
