@@ -24,7 +24,7 @@
 
 ## ⚙️ How to run the project
 
-- #### **Clona the repository from GitHub:**
+- #### **Clone the repository from GitHub:**
     - git clone https://github.com/Medieinstitutet/the-zoo-RebeckaGothlin
 
 - #### **Install the dependencies:**
