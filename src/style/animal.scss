@@ -65,6 +65,7 @@
   font-size: 5rem;
   text-transform: uppercase;
   margin-top: 0;
+  font-family: 'Courier New', Courier, monospace;
 }
 
 .animal-isFed-status {
@@ -83,7 +84,9 @@
 
 .animal-about {
   font-family: "Open Sans";
-  font-size: 1.5rem;
+  font-size: 2rem;
+  font-family: 'Courier New', Courier, monospace;
+  font-weight: bold;
 }
 
 .text-bold {
@@ -98,6 +101,10 @@
 .about-thank {
   font-family: "Open Sans";
   font-size: 1.2rem;
+}
+
+h2 {
+  font-family: 'Courier New', Courier, monospace;
 }
 
 .button-back {

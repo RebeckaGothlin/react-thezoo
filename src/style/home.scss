@@ -32,13 +32,14 @@
   padding: 15px;
   border-radius: 8px;
   background-color: #323232; 
-  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 2px 10px rgba(227, 163, 163, 0.861);
 }
 
 .hungry-animals h2 {
   font-size: 24px;
   color: #e2c5be;
   margin-bottom: 10px;
+  font-family: 'Courier New', Courier, monospace;
 }
 
 .hungry-animals ul {
@@ -52,11 +53,13 @@
   border-radius: 4px;
   background-color: #e2c5be;
   color: #3d3939; 
-  transition: background-color 0.3s; 
+  transition: background-color 0.3s;
+  letter-spacing: 3px;
+  text-transform: uppercase;
 }
 
 .hungry-animals p {
-  color: #7f8c8d;
+  color: #e2c5be;
 }
 
 @media screen and (min-width: 768px) {
