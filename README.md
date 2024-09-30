@@ -4,6 +4,12 @@
 
 ---
 
+#### Link to the project
+
+https://rebeckagothlin.github.io/react-thezoo/
+
+---
+
 ## 📄 About The Project 
 
 **During the course "Javascript fördjupning" at Medieinstitutet we were tasked with developing The Zoo webpage using React and TypeScript.**
